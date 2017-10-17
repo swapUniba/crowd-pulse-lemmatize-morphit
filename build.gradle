@@ -15,9 +15,13 @@ repositories {
     }
 }
 
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
 dependencies {
-    compile 'com.github.swapUniba:crowd-pulse-data-java:0.0.1'
-    compile 'com.github.swapUniba:crowd-pulse-lemmatize:0.0.1'
+    compile 'com.github.swapUniba:crowd-pulse-data-java:master-SNAPSHOT'
+    compile 'com.github.swapUniba:crowd-pulse-lemmatize:master-SNAPSHOT'
     compile 'commons-io:commons-io:2.4'
     testCompile group: 'junit', name: 'junit', version: '4.11'
 }
